@@ -9,7 +9,7 @@ import donation from './img/donation.png';
 import Hotkeys from 'react-hot-keys'
 import packageJson from '../package.json';
 import { Start, Terms, ConvertTool, SeedTool, FindAddressTool, KeyGeneratorTool, AddressExtractorTool, PaperWalletTool, PaymentTool,
-  SigningTool, WorkGeneratorTool, VanityTool, InspectTool, QRTool, MessengerTool, SweepTool, DifficultyTool} from './tools'
+  SigningTool, WorkGeneratorTool, VanityTool, InspectTool, QRTool, SweepTool, DifficultyTool} from './tools'
 const tools = ['HOME', 'CONVERT', 'SEED', 'PAPER', 'PAY', 'KEYGEN', 'EXTRACT', 'FINDADDR', 'SIGN', 'POW', 'VANITY', 'INSPECTOR', 'QR', "MSG", "SWEEP", "DIFF"]
 global.appVersion = packageJson.version;
 
@@ -330,11 +330,6 @@ class MainPage extends Component {
             type: q_type
           })
         }
-        break
-
-        // MessengerTool
-        case 'msg':
-        toolId = 13
         break
 
         // SweepTool
@@ -774,7 +769,6 @@ class MainPage extends Component {
             {(active === 'VANITY') && <VanityTool {...this} /> }
             {(active === 'INSPECTOR') && <InspectTool {...this} /> }
             {(active === 'QR') && <QRTool {...this} /> }
-            {(active === 'MSG') && <MessengerTool {...this} /> }
             {(active === 'SWEEP') && <SweepTool {...this} /> }
             {(active === 'DIFF') && <DifficultyTool {...this} /> }
           </div>
